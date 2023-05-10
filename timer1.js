@@ -3,7 +3,7 @@
 // system sound: process.stdout.write('\x07');
 // multiply nums by 1000 to convert number to milliseconds ?
 
-let alarms = process.argv.slice(2);
+let alarms = process.argv.slice(2).filter(Number).filter(alarm => alarm >= 0);
 
 alarms.forEach((alarm) => {
   setTimeout(() => {
